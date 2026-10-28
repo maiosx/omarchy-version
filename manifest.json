@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "maiosx.omarchy-version",
+  "name": "Omarchy Version",
+  "version": "0.1.0",
+  "author": "maiosx",
+  "license": "MIT",
+  "description": "Shows the installed Omarchy build (e.g. Omarchy 4.5.0rc2-1) on the bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Omarchy Version",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
