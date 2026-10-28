@@ -34,6 +34,15 @@ BarWidget {
     if (!versionProc.running) versionProc.running = true
   }
 
+  // Opens fastfetch in the default terminal and keeps the window open
+  // until a key is pressed (fastfetch exits immediately otherwise).
+  function openFastfetch() {
+    Quickshell.execDetached([
+      "xdg-terminal-exec", "sh", "-c",
+      "fastfetch; printf '\\n'; read -rsn1 -p 'Press any key to close...'"
+    ])
+  }
+
   // Picks up updates without needing a shell restart.
   Timer {
     interval: 30 * 60 * 1000
@@ -47,9 +56,9 @@ BarWidget {
     anchors.fill: parent
     bar: root.bar
     text: root.label
-    tooltipText: "Omarchy build (click to refresh)"
+    tooltipText: "Omarchy build (click for fastfetch)"
     onPressed: function(buttonCode) {
-      if (buttonCode === Qt.LeftButton) root.refresh()
+      if (buttonCode === Qt.LeftButton) root.openFastfetch()
     }
   }
 }
