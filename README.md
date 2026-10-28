@@ -1,10 +1,11 @@
 # Omarchy Version
 <img width="618" height="194" alt="Preview" src="Preview.png" />
 
-An Omarchy bar widget that shows the installed Omarchy build, e.g. `Omarchy 4.5.0rc2-1`.
+An Omarchy bar widget that shows the installed Omarchy build, e.g. Omarchy 4.5.0rc2-1.
 
-It reads `pacman -Q omarchy` (falling back to `omarchy version`), refreshes every
-30 minutes, and refreshes immediately when you left-click it.
+It reads pacman -Q omarchy (falling back to omarchy version), refreshes every 30 minutes. Left-clicking it opens fastfetch in your default terminal (xdg-terminal-exec); press any key to close the window.
+
+Requires fastfetch (sudo pacman -S fastfetch).
 
 ## Install
 
