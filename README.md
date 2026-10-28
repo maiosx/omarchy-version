@@ -1,4 +1,5 @@
 # Omarchy Version
+<img width="618" height="194" alt="Preview" src="Preview.png" />
 
 An Omarchy bar widget that shows the installed Omarchy build, e.g. `Omarchy 4.5.0rc2-1`.
 
